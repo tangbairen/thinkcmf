@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no;">
+    <title>新闻详情-{$name}-{$site_name}</title>
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}">
+
+    <link rel="stylesheet" href="__TMPL__Public/css/reset.css"/>
+    <link rel="stylesheet" href="__TMPL__Public/css/style.css"/>
+    <link rel="shortcut icon" href="__TMPL__Public/images/logo.png">
+    <link rel="stylesheet" href="__TMPL__Public/css/product.css"/>
+    <link rel="stylesheet" href="__TMPL__Public/css/custom.css">
+
+
+    <script src="__TMPL__Public/js/jquery-1.10.2.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="__TMPL__Public/js/html5shiv.min.js"></script>
+    <script src="__TMPL__Public/js/css3-mediaqueries.js"></script>
+    <script src="__TMPL__Public/js/rem.min.js"></script>
+    <script src="__TMPL__Public/js/pie_ie678.js"></script>
+    <script src="__TMPL__Public/js/selectivizr-min.js"></script>
+    <![endif]-->
+    <style>
+        .product-feature-wrap{min-height: 500px;background-color: #fff}
+        .pull-right{color: #000;border: 1px solid #000000}
+        .pull-left{color: #000;border: 1px solid #000000}
+        .product-feature-wrap{padding-top: 20px;}
+        .product-feature-wrap h2{text-align: center;font-size: 24px;}
+        .article-infobox{text-align: center;}
+        #article_content{padding: 10px;line-height: 20px;font-size: 16px !important;}
+    </style>
+</head>
+
+
+<body class="bg-gray" > <!-- body 에 class="slide-menu-active" 입력시 모바일 사이드메뉴가 열립니다.-->
+
+<div class="global-wrap">
+    <!-- header -->
+    <div id="header" class="header">
+        <div class="grid-row">
+            <h1 class="logo"><a href="/" data-track-name="gnb/logo"><img src="__TMPL__Public/images/logo_pub.png" alt="ODYSSEY"/><span class='blind'>ODYSSEY</span></a></h1>
+            <div id="gnb" class="gnb">
+                <?php
+                $effected_id="main-menu";
+                $filetpl="<a href='\$href' target='\$target'>\$label</a>";
+                $foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown'>\$label
+                <b class='caret'></b></a>";
+                $ul_class="top-menu" ;
+                $li_class="li-class" ;
+                $style="top-menu";
+                $showlevel=6;
+                $dropdown='dropdown';
+                echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
+                ?>
+                <!--<ul class="top-menu">
+
+                    <li><a href="{:U('index/index')}" class="">首页</a></li>
+                    <li><a href="{:U('about/index')}" class="top-menu-title">关于我们</a></li>
+                    <li><a href="brand.html" class="">品牌中心</a></li>
+                    <li><a href="support.html" class="">合作</a></li>
+                    <li><a href="news.html" class="">新闻动态</a></li>
+                    <li><a href="contact.html" class="">联系我们</a></li>
+
+                </ul>-->
+            </div>
+
+        </div>
+
+    </div>
+    <div id="container" class="container">
+        <div class="parbase item_line">
+
+            <div class="pub_top_img">
+                <img src="__TMPL__Public/images/about_bg.png" alt=""/>
+                <div class="pub_top_img_s"><img src="__TMPL__Public/images/about_bg_s.png" alt=""/></div>
+            </div>
+            <div class="grid-row wide">
+                <div class="product-wrap">
+                    <!-- banner -->
+                    <script>
+                        $(document).ready(function() {
+                            productList.list();
+                            productList.contentOpen();
+                            $('.bx-clone .bottom-option > a').attr('tabindex','-1');
+                        });
+                    </script>
+                    <!-- banner End -->
+                    <div class="product-list-wrap list_about">
+                        <div class="grid-row bag">
+                            <div class="product-list-head">
+                                <div class="parbase breadcrumb">
+                                    <div class="location">
+                                        您的位置：<a href="">首页</a> > <a href="">关于我们</a>
+                                    </div>
+
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="product-list-content line_blue">
+
+
+                                    <div class="product-feature-wrap">
+                                            <h2 >{$post_title}</h2>
+                                            <div class="article-infobox" style="margin-bottom: 10px;margin-top: 10px;">
+                                                <span>{$post_date} </span>
+                                                <!--<span>
+                                                    <a href="javascript:;"><i class="fa fa-eye"></i><span>{$post_hits}</span></a>
+                                                    <a href="{:U('article/do_like',array('id'=>$article_id))}" class="js-count-btn"><i class="fa fa-thumbs-up"></i><span class="count">{$post_like}</span></a>
+                                                    <a href="{:U('user/favorite/do_favorite',array('id'=>$article_id))}" class="js-favorite-btn" data-title="{$post_title}" data-url="{:leuu('article/index',array('id'=>$article_id,'cid'=>$term_id))}" data-key="{:sp_get_favorite_key('posts',$article_id)}">
+                                                        <i class="fa fa-star-o"></i>
+                                                    </a>
+                                                </span>-->
+                                            </div>
+                                            <hr>
+                                            <div id="article_content">
+                                                {$post_content}
+                                            </div>
+                                            <if condition="!empty($post_source)">
+                                                <div>
+                                                    <b>注：本文转载自{$post_source}，转载目的在于传递更多信息，并不代表本网赞同其观点和对其真实性负责。如有侵权行为，请联系我们，我们会及时删除。</b>
+                                                </div>
+                                            </if>
+                                            <div style="margin-top: 20px;text-align: center;" >
+                                                <if condition="!empty($prev)">
+                                                    <a href="{:leuu('article/index',array('id'=>$prev['object_id'],'cid'=>$prev['term_id']))}" class="btn btn-primary pull-left">上一篇</a>
+                                                </if>
+                                                <if condition="!empty($next)">
+                                                    <a href="{:leuu('article/index',array('id'=>$next['object_id'],'cid'=>$next['term_id']))}" class="btn btn-warning pull-right">下一篇</a>
+                                                </if>
+                                                <script type="text/javascript" src="__TMPL__Public/assets/js/qrcode.min.js"></script>
+                                                <div id="qrcode" style="width: 100px;margin:0 auto;margin-top: 50px;margin-bottom: 20px;"></div>
+                                                <script type="text/javascript">
+                                                    var qrcode = new QRCode(document.getElementById("qrcode"), {
+                                                        width : 100,
+                                                        height : 100
+                                                    });
+                                                    function makeCode () {
+                                                        qrcode.makeCode("http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}");
+                                                    }
+                                                    makeCode();
+                                                </script>
+                                                <div class="clearfix"></div>
+                                            </div>
+
+
+                                            {:hook('comment',array(
+                                            'post_id'=>$article_id,
+                                            'post_table'=>'posts',
+                                            'post_title'=>$post_title
+                                            ))}
+
+
+                                        <div class="clear"></div>
+
+
+                                    </div>
+                                    <!--<div class="idea"><strong>企业理念</strong>：诚信经营，稳健发展；不断创新，专业追求！</div>
+
+                                    <ul class="product-list line_blue_child">
+                                        <php>
+                                            $slides=sp_getslide('about_images',$limit=6,$order = "listorder ASC");
+                                        </php>
+                                        <foreach name="slides" item="val">
+                                            <li class="product-item">
+                                                <a href="{$vo.slide_url}">
+                                                    <div class="pro-w"><img src="{:sp_get_asset_upload_path($val['slide_pic'])}" alt=""></div>
+
+                                                    <div class="grid-row">{$val.slide_name}</div>
+                                                </a>
+                                            </li>
+
+                                        </foreach>
+
+                                    </ul>-->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+
+    <footer id="footer_pub">
+        <include file="Public:footer" />
+    </footer>
+    <!-- //footer -->
+    <div class="slide-dimm-wrap"></div>
+    <a href="#header" class="btn-go-top" data-track-name="탑버튼"><span class="blind">본문 상단으로 가기</span></a>
+</div>
+<!-- //wrap -->
+
+</div>
+
+
+</body>
+<!-- //scripts -->
+<script src="__TMPL__Public/js/jquery.bxslider.min.js"></script>
+<!--<script src="__TMPL__Public/js/jquery.sticky.js"></script>-->
+<script src="__TMPL__Public/js/odyssey.ui.js"></script>
+<script src="__TMPL__Public/js/odyssey.js"></script>
+

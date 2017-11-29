@@ -1,0 +1,29 @@
+<div id="header" class="header">
+	<div class="grid-row">
+		<h1 class="logo"><a href="/" data-track-name="gnb/logo">
+			<img src="__TMPL__Public/images/logo_pub.png" alt="ODYSSEY"/>
+			<span class='blind'>ODYSSEY</span></a></h1>
+		<div id="gnb" class="gnb">
+			<?php
+            $effected_id="main-menu";
+            $filetpl="<a href='\$href' target='\$target'>\$label</a>";
+			$foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown'>\$label
+			<b class='caret'></b></a>";
+			$ul_class="top-menu" ;
+			$li_class="li-class" ;
+			$style="top-menu";
+			$showlevel=6;
+			$dropdown='dropdown';
+			echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
+			?>
+			<!--<ul class="top-menu">
+				<li><a href="" class="">Home page</a></li>
+				<li><a href="about.html" >关于我们</a></li>
+				<li><a href="brand.html" class="">Brand center</a></li>
+				<li><a href="support.html" class="">Cooperation</a></li>
+				<li><a href="news.html" class="">News information</a></li>
+				<li><a href="contact.html" class="">Contact us</a></li>
+			</ul>-->
+		</div>
+	</div>
+</div>

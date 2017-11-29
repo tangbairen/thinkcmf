@@ -1,0 +1,55 @@
+﻿@charset "utf-8";
+
+@import url(notosanskr.css);
+@import url(210f8373a5044d27aedfee3223738468.css);
+
+/* base */
+* {box-sizing: border-box;}
+*:before, *:after {box-sizing: border-box;}
+
+/* reset */
+* {margin:0; padding:0}
+
+html {height:100%; margin:0; padding:0; font-family: 微软雅黑, 'Noto Sans KR', 'Malgun Gothic', sans-serif; letter-spacing:-1px;}
+body {margin:0; padding:0; height:100%; font-size:12px; color:#666; line-height:1.2; word-break:keep-all; -moz-text-size-adjust:none; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
+label {vertical-align:middle}
+address,em {font-style:normal}
+strong,b,th {font-weight:500;}
+fieldset,img {border:0; vertical-align:middle}
+caption,legend {width:1px; text-align:left; font-size:0; line-height:0; text-indent:-999em}
+ul,ol,dl,dt,dd,li {list-style:none}
+h1,h2,h3,h4,h5,h6 {font-weight:bold; font-size:100%}
+input,textarea,select {color:#666; letter-spacing:-1px; vertical-align:middle; -webkit-appearance:none; border-radius:0; border:0;}
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {display:block}
+div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,iframe,fieldset,input,table,tr,th,td,button,textarea,select, thead, tbody, tfoot, pre, option {margin:0; padding:0; color:#666; letter-spacing:0;}
+textarea {resize:none;}
+
+table {width:100%; border-spacing:0}
+table th {border-collapse:collapse; *border-collapse:collapse}
+table td {border-collapse:collapse}
+button {border:none; background:none; cursor:pointer;}
+input, button, select, textarea {font-family: 微软雅黑, 'Noto Sans KR', 'Malgun Gothic', sans-serif; letter-spacing:-1px;}
+figcaption {position:absolute; overflow:hidden; width:0; height:0; font-size:0; line-height:0}
+
+
+input[type='checkbox']{-webkit-appearance:checkbox;}
+
+
+legend {visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0}
+
+a {color:#666; text-decoration:none;}
+
+a > .atxt { overflow:hidden; display:block;}
+
+/* IR */
+.blind {position:absolute; width:0; height:0; font-size:0; line-height:0; text-align:left; text-indent:-999em}
+
+#skip-nav{z-index:900; overflow:hidden; position:fixed; top:0; left:0; width:100%; z-index:100;}
+#skip-nav a{display:block; width:100%; font-size:0; line-height:0; text-align:left}
+#skip-nav a:hover, 
+#skip-nav a:focus, 
+#skip-nav a:active {position:static; left:0; padding:9px 0; height:auto; width:100%; background:#f2f2f2; font-size:12px; font-weight:bold; color:#000; line-height:16px; text-align:center; box-sizing:border-box;}
+
+	
+
+

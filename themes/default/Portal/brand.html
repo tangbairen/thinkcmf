@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no;">
+    <title>{$name}-{$site_name}</title>
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}">
+    <link rel="shortcut icon" href="__TMPL__Public/images/logo.png">
+    <link rel="stylesheet" href="__TMPL__Public/css/reset.css"/>
+    <link rel="stylesheet" href="__TMPL__Public/css/style.css"/>
+
+    <link rel="stylesheet" href="__TMPL__Public/css/product.css"/>
+    <link rel="stylesheet" href="__TMPL__Public/css/custom.css">
+
+    <script src="__TMPL__Public/js/jquery-1.10.2.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="__TMPL__Public/js/html5shiv.min.js"></script>
+    <script src="__TMPL__Public/js/css3-mediaqueries.js"></script>
+    <script src="__TMPL__Public/js/rem.min.js"></script>
+    <script src="__TMPL__Public/js/pie_ie678.js"></script>
+    <script src="__TMPL__Public/js/selectivizr-min.js"></script>
+    <![endif]-->
+    <style>
+        .list_brand .product-list > li {width: 29%;}
+        .product-list-head{min-height: 500px;}
+    </style>
+</head>
+
+<body class="bg-gray" >
+	<!-- global_wrap  -->
+	<div class="global-wrap">
+        <!-- header 头部 -->
+        <include file="Public:nav_othor"/>
+
+        <div id="container" class="container">
+            <div class="parbase item_line">
+
+                <div class="pub_top_img">
+                    <img src="__TMPL__Public/images/brand_bg.png" alt=""/>
+                    <!--<div class="pub_top_img_s"><img src="__TMPL__Public/images/about_bg_s.png" alt=""/></div>-->
+                </div>
+                <div class="grid-row wide">
+                    <div class="product-wrap">
+                        <div class="product-list-wrap list_brand">
+                        <div class="grid-row bag">
+                            <div class="product-list-head">
+
+                                <div class="parbase breadcrumb">
+                                    <div class="location">
+                                        您的位置：<a href="">首页</a> > <a href="">品牌中心</a>
+                                    </div>
+
+                                    <div class="clear"></div>
+                                </div>
+                                    <div class="product-list-content line_blue">
+                                        <div class="line-title">
+                                            <h3 class="title">都可品牌</h3>
+                                            <span class="sub-title">PROJECTS</span>
+
+                                        </div>
+                                        <ul class="product-list line_blue_child">
+                                            <php>
+                                                $slides=sp_getslide('brands_list',$limit=20,$order = "listorder ASC");
+                                            </php>
+                                            <foreach name="slides" item="val">
+                                            <li class="product-item">
+                                                <div class="port-1 effect-2">
+                                                    <div class="image-box">
+                                                        <img src="{:sp_get_asset_upload_path($val['slide_pic'])}" alt="Image-2">
+                                                    </div>
+                                                    <div class="text-desc">
+                                                        <a href="{$val.slide_url}" class="btn" data-track-name="">了解更多</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            </foreach>
+
+                                        </ul>
+
+
+                                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- footer -->
+        <footer id="footer_pub">
+            <include file="Public:footer"/>
+        </footer>
+        <!-- //footer -->
+
+    </div>
+
+</body>
+</html>

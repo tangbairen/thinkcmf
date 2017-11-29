@@ -1,0 +1,222 @@
+﻿@charset 'utf-8';
+
+/* 공통 */
+.fl {float:left}
+.fr {float:right}
+.card-paging.mt40{margin-top:40px;}
+.paging-wrap.Pc {display:block;}
+.list-loader.Mobile {display:none;}
+
+/* 뉴스 리스트 */
+.card-list-area {}
+.card-list-area .card-list {float:left;}
+.card-list > a {display:block; overflow:hidden; position:relative; height:440px; border-top:1px solid #c6cbd2; border-bottom:1px solid #c6cbd2;word-break:keep-all;}
+.card-list .inner {display:block;width:100%; height:100%; padding:55px 20px 20px 20px;}
+.card-list .card-month {display:block;position:absolute;right:0;top:0;width:55px;height:55px; border-right:1px solid #c6cbd2;border-bottom:1px solid #c6cbd2;border-left:1px solid #c6cbd2;text-align:center;font-size:15px;line-height:55px;color:#333;font-weight:bold;}
+.card-list .card-date {display:inline-block;margin-bottom:20px;font-size:14px;color:#333;}
+
+.card-list .card-title {margin-bottom:30px;font-size:26px;color:#333;}
+.card-list .card-content {position:relative;padding-top:30px;background:url(../images/line_lightgray_30x1.gif) 0 0 no-repeat; } 
+.card-list .card-content .card-des {width:100%;font-size:14px; color:#666; line-height:1.5}
+.card-list .card-content img{width:100%;height:auto;margin-top:15px;}
+.card-list .card-content .card-des .txt {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp: 7;
+    -moz-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    width:auto;
+    height: 10.5em;
+}
+.card-list .card-content .card-des .txt.txt_img {
+    height: 3em;
+}
+
+.card-list-area.col3 .card-list > a {height:470px;}
+.card-list-area.col4 .card-list > a {height:405px;}
+
+.card-list-area.col3 {margin:-12px 0 0 -12px;}
+.card-list-area.col3 .card-list {width:33.3%; padding:12px 0 0 12px}
+.card-list-area.col3 .card-list a {}
+.card-list-area.col4 {margin:-8px 0 0 -8px;}
+.card-list-area.col4 .card-list {width:25%; padding:8px 0 0 8px}
+.card-list-area.social-list {margin:-8px 0 0 -8px;}
+.card-list-area.social-list .card-list {width:25%; padding:8px 0 0 8px}
+
+/* sns 리스트 */
+.card-list-area.social-list .card-list-part {display:block;position:relative;border-top:1px solid #c6cbd2; border-bottom:1px solid #c6cbd2;word-break:keep-all;}
+.card-list-area.social-list .card-list-part > img {position:relative;z-index:1;width:100%; height:auto;}
+.card-list-part .social-contetnt {padding:30px 20px;}
+.social-contetnt .social-contetnt-text {position:relative;padding-bottom:15px;margin-bottom:20px;font-size:13px;line-height:21px;}
+.social-contetnt .social-contetnt-text .txt {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp: 5;
+    -moz-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    width:auto;
+    height: 105px;
+}
+.social-contetnt .social-contetnt-text:after {position:absolute;left:0;bottom:0;width:30px;height:1px;background:#c6cbd2;content:'';}
+.social-contetnt .social-contetnt-data time {float:right;line-height:35px;font-size:13px;}
+.social-contetnt .social-detail-view {display:inline-block;position:relative;padding-left:9px;margin-left:10px;color:#0149a1}
+.social-contetnt .social-detail-view:after {position:absolute;left:0;top:0px;content:'+';}
+.card-list-area.social-list.mt60 {margin-top:60px;}
+
+
+/* 테두리디자인 */
+.edge-type .card-list > a:after, .card-list-part:after {position:absolute;left:0;top:0;width:1px;height:55px;background:#c6cbd2;content:'';}
+.edge-type .card-list > a .inner:after , .social-contetnt-data:after {position:absolute;right:0;bottom:0;width:1px;height:55px;background:#c6cbd2;content:'';}
+
+/* 이벤트 마감 */
+.card-list.evtEnd {position:relative;}
+.edge-type .card-list a .event-end-cover {position:absolute;left:0;top:0;right:0;bottom:0;width:100%;height:100%;z-index:10; background:url('../images/bg_dimm.png') repeat; content:'';}
+.edge-type .card-list a .event-end-cover .end-image {display:block; position:absolute;left:0;top:0;right:0;bottom:0;width:100%;height:100%;z-index:20;background:url('../images/evt_end.png') no-repeat center center;}
+
+/* 뉴스 뷰페이지 16.04.05 추가 */
+.news_desc {font-family:'Malgun Gothic', sans-serif;}
+.news_desc .fc_blue {color:#0070c0;}
+.news_desc .fc_black {color:#000;}
+.news_desc .fc_navy {color:#1f497d;}
+.news_desc .fs_20 {font-size:20px;}
+.news_desc .txt_c {text-align:center;}
+.news_desc .top_box {padding:30px 0;border:solid 1px #000;text-align:center;margin-bottom:40px;}
+.news_desc .top_box .top_box_btit {color:#0070c0;font-size:20px;letter-spacing:-0.03em;}
+.news_desc .top_box .top_box_btit strong {font-size:24px;font-weight:bold;}
+.news_desc .top_box .top_box_stxt {text-align:center;margin-top:15px;}
+.news_desc .top_box .top_box_stxt li {color:#808080;margin-bottom:8px;}
+.news_desc .news_detail_txt {font-weight:normal;margin-bottom:15px;font-size:14px;padding:0 20px;line-height:1.4;}
+.news_desc .news_detail_txt .title {text-decoration:underline;color:#333;margin-bottom:10px;padding:0;}
+.news_desc .news_detail_txt .title strong {font-weight:bold;}
+.news_desc .news_detail_txt .ntd {text-decoration:none;}
+.news_desc .news_detail_txt .ps_gry {color:#aaa;font-size:12px;}
+.news_desc .news_detail_txt img.thum_img {width:auto; }
+.news_desc .news_detail_txt.t_left img {float:right;margin-left:15px;}
+.news_desc .news_detail_txt.t_right img {float:left;margin-right:15px;}
+.news_desc .news_detail_txt:after {clear:both;display:block;content:"";}
+
+
+/* 이벤트 뷰페이지 */
+
+/* 이벤트결과 목록 */
+.list-table {width:100%;}
+.list-table span {}
+.list-table .list-table-head {border:1px solid #c6cbd2;}
+.list-table .list-table-head span {float:left;display:inline-block;padding:20px 0;text-align:center;font-size:16px;color:#333;}
+.list-table .table-list-num {width:12%;}
+.list-table .table-list-tit {width:70%;}
+.list-table .table-list-day {width:18%;}
+.list-table .list-table-body li {border-bottom:1px solid #e7e8eb;}
+.list-table .list-table-body span {float:left;display:inline-block;padding: 22px 0;text-align:center;font-size:14px;color:#333;}
+.list-table .list-table-body .table-list-tit {padding:22px 20px 22px 60px;text-align:left;}
+.list-table .list-table-body .table-list-tit a {display:block;}
+
+/* 이벤트 당첨자발표 */
+.event-win-list {margin:0 20px;text-align:center;}
+.event-win-list ul li {float:left;width:25%;}
+.event-win-list .event-win-list-head {border-top:1px solid #c6cbd2;border-bottom:1px solid #c6cbd2;background:#f2f2f2;}
+.event-win-list .event-win-list-head li {border-left:1px solid #c6cbd2;padding:15px 0;font-size:16px;color:#333;}
+.event-win-list .event-win-list-head li:first-child {border-left:none}
+
+.event-win-list .event-win-list-body {border-bottom:1px solid #c6cbd2;}
+.event-win-list .event-win-list-body li {border-left:1px solid #c6cbd2;padding:15px 0;font-size:14px;}
+.event-win-list .event-win-list-body li.first {border-left:none;}
+.event-win-list .event-win-list-body li + li + li + li + li {border-top:1px solid #e7e8eb;}
+
+.event-win-info {margin-top:13px}
+
+.blank { width:100%; height:100%; background:url('../images/blank-logo.png') center no-repeat; }
+.card-paging .blank { width:100%; height:auto; min-height:79px; background:url('../images/blank-logo.png') center no-repeat; background-size:100%;}
+
+
+/* 태블릿 */
+@media all and (max-width:1199px){
+	/* common */
+
+	/* 뉴스 리스트 */
+    .card-list-area.col3 .card-list > a {height:500px;}
+    .card-list-area.col4 .card-list > a {height:470px;}
+	.card-list-area.col4 .card-list,
+	.card-list-area.col3 .card-list {width:50%;}
+	.card-list .inner {padding:55px 30px 20px 30px;}
+	.card-list .card-date {margin-bottom:15px;}
+	.card-list .card-title {margin-bottom:25px;}
+	.card-list .card-content {padding-top:25px;}
+
+	.card-list-area.social-list {margin:-12px 0 0 -12px;}
+	.card-list-area.social-list .card-list {width:33.3%; padding:12px 0 0 12px}
+}
+
+/* 모바일 */
+@media all and (max-width:767px) {
+	/* common */
+	.paging-wrap.Pc {display:none;}
+	.list-loader.Mobile {display:block;}
+
+	/* 검색바 플롯none */
+	.search-bar-area .search-bar {float:none;}
+	.card-paging.mt40{margin-top:20px;}
+
+	/* 뉴스 리스트 */
+	.card-list-area.col3,
+	.card-list-area.col4,
+	.card-list-area.social-list {margin:0}
+	.card-list-area.col3 .card-list,
+	.card-list-area.col4 .card-list,
+	.card-list-area.social-list .card-list {width:100%; height:auto; margin:0; padding:0; border-top:0;}
+	.card-list-area.col3 .card-list a,
+	.card-list-area.col4 .card-list a {height:auto; border-top:0;}
+	.card-list-area.col3 .card-list:first-child a,
+	.card-list-area.col4 .card-list:first-child a,
+	.card-list-area.social-list .card-list:first-child .card-list-part {border-top:1px solid #c6cbd2;}
+
+	.edge-type .card-list > a .inner:after, .edge-type .card-list > a:after {height:38px;}
+
+	.card-list .inner {padding:30px 15px 20px 15px; height:auto;}
+	.card-list .inner .blank {height:300px;}
+	.card-list .card-month {width:30px;height:30px;line-height:30px;font-size:12px;}
+	.card-list .card-date {margin-bottom:10px;font-size:12px;}
+	.card-list .card-title {margin-bottom:10px;font-size:22px;}
+	.card-list .card-content {padding-top:15px;}
+	.card-list .card-content .card-des {font-size:14px;}
+	.card-list .card-content img{width:100%;height:auto;margin-top:15px;}
+	.card-list-area.col3 .card-content{padding-top:0;background:none;}
+	.social-contetnt .social-contetnt-text:after {width:15px;}
+	.social-contetnt-data >img {width:17px;height:17px;}
+	.social-contetnt .social-contetnt-data time {line-height:17px;font-size:12px;color:#333;}
+	.card-list-part:after, .social-contetnt-data:after {height:30px;}
+	.card-list-area.social-list.mt60 {margin-top:30px;}
+	
+	/* sns_list */
+	.card-list-area.social-list .card-list {margin-bottom:10px;}
+	.card-list-part .social-contetnt {padding:15px 10px;}
+	.social-contetnt .social-contetnt-text {padding-bottom:10px;margin-bottom:10px;}
+
+	/* 이벤트 결과 */
+	.list-table .list-table-head,
+	.list-table .list-table-body .table-list-num {display:none;}
+	.list-table .list-table-body {border-top:2px solid #c6cbd2;/*border-bottom:2px solid #c6cbd2;*/}
+	.list-table .list-table-body li {padding:18px 10px;border-top:1px solid #e7e8eb;border-bottom:0;}
+	.list-table .list-table-body li:first-child {border-top:0;}
+	.list-table .list-table-body .table-list-tit {width:100%;margin-bottom:8px;padding:0;font-size:18px;}
+	.list-table .list-table-body .table-list-day {width:100%;padding:0;text-align:left;font-size:14px;}
+
+	/* 이벤트 당첨자발표 */
+	.event-win-list {margin:0;}
+	.event-win-list ul li {width:50%;}
+	.event-win-list .event-win-list-head li {padding:6px 0;font-size:14px;}
+	.event-win-list .event-win-list-head li.event-win-hidden {display:none;}
+	.event-win-list .event-win-list-body li {padding:6px 0;font-size:14px;}
+	.event-win-list .event-win-list-body li.id-col {border-left:none;}
+	/* .event-win-list .event-win-list-body li:nth-child(2n-1) {border-left:none !important;} */
+	/* .event-win-list .event-win-list-body li:nth-child(4n-3) {border-left:1px solid #c6cbd2;} */
+	.event-win-list .event-win-list-body li + li + li {border-top:1px solid #e7e8eb;}
+	.event-win-info {margin-top:10px;font-size:12px;}
+}
+

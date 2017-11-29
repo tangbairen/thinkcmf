@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no;">
+
+	<title><block name="title">首页-{$site_name}</block></title>
+	<meta name="keywords" content="{$site_seo_keywords}" />
+	<meta name="description" content="{$site_seo_description}">
+
+	<link rel="shortcut icon" href="__TMPL__Public/images/logo.png">
+	<link rel="stylesheet" href="__TMPL__Public/css/reset.css"/>
+	<link rel="stylesheet" href="__TMPL__Public/css/style.css"/>
+
+	<link rel="stylesheet" href="__TMPL__Public/css/blue.css">
+	<link rel="stylesheet" href="__TMPL__Public/css/custom.css">
+	<script src="__TMPL__Public/js/jquery-1.10.2.min.js"></script>
+	<script src="__TMPL__Public/js/jquery.easing.1.3.js"></script>
+	<!--[if lt IE 9]>
+	<script src="__TMPL__Public/js/html5shiv.min.js"></script>
+	<script src="__TMPL__Public/js/css3-mediaqueries.js"></script>
+	<script src="__TMPL__Public/js/rem.min.js"></script>
+	<script src="__TMPL__Public/js/PIE_IE678.js"></script>
+	<script src="__TMPL__Public/js/selectivizr-min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+
+		$(function(){
+			var cubuk_seviye = $(document).scrollTop();
+//            alert(cubuk_seviye);
+			var header_yuksekligi = $('.nav_top').outerHeight();
+			var header_yuksekligi3 = window.innerHeight*3;
+//            alert(header_yuksekligi3);
+
+			$(window).scroll(function() {
+				var kaydirma_cubugu = $(document).scrollTop();
+
+				if (kaydirma_cubugu > header_yuksekligi){$('.nav_top').addClass('nav_show');}
+				else {$('.nav_top').removeClass('nav_show');}
+				if (kaydirma_cubugu > header_yuksekligi){$('.logo_top').addClass('logo_show');}
+				else {$('.logo_top').removeClass('logo_show');}
+
+				if (kaydirma_cubugu == header_yuksekligi3  ){$('.nav').addClass('naves');}
+				else {$('.nav').removeClass('naves');}
+				if (kaydirma_cubugu == header_yuksekligi3  ){$('.logo_top').addClass('logo_naves');}
+				else {$('.logo_top').removeClass('logo_naves');}
+//                    if (kaydirma_cubugu > cubuk_seviye){$('.logo_top').removeClass('logo_show');}
+//                    else {$('.logo_top').addClass('logo_show');}
+
+				cubuk_seviye = $(document).scrollTop();
+			});
+		});
+	</script>
+	<block name="style"></block>
+</head>
+
+<block name="content">
+
+</block>
+
+<script src="__TMPL__Public/js/blue.js"></script>
+<script src="__TMPL__Public/js/isMobile.min.js"></script>
+<script type="text/javascript">
+
+	$(window).load(function() {
+
+		$('a[data-track-shop]').click(function() {
+
+			var trackShop = $(this).attr('data-track-shop');
+			if (trackShop) {
+				trackClicksOnlineShop(trackShop, true);
+				return true;
+			}
+		});
+
+		$('a[data-track-name]').click(function() {
+
+			var trackName = $(this).attr('data-track-name');
+			var tName = trackName.replace(/(<([^>]+)>)/ig,"");
+
+			if (tName) {
+				trackClicksEx(tName, true);
+				return true;
+			}
+		});
+	});
+
+	function removeLoginVar(){
+		if( s.eVar20 ){
+			s.eVar19 = '';
+			s.eVar20 = '';
+			s.eVar22 = '';
+			s.eVar23 = '';
+			s.eVar24 = '';
+		}
+	}
+
+
+	function removeCookieData(){
+		setCookieData("false", -1);
+	}
+
+</script>
+
+<script src="__TMPL__Public/js/jquery.placeholder-enhanced.min.js"></script>
+<script src="__TMPL__Public/js/jquery.bxslider.min.js"></script>
+<script src="__TMPL__Public/js/jquery.sticky.js"></script>
+<script src="__TMPL__Public/js/odyssey.ui.js"></script>
+<script src="__TMPL__Public/js/odyssey.js"></script>
+<script src="__TMPL__Public/js/videojs-ie8.min.js"></script>
+<script src="__TMPL__Public/js/video.js"></script>
+<script src="__TMPL__Public/js/isMobile.min.js"></script>
+<block name="js"></block>
+</html>

@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no;">
+    <title>{$name}-{$site_name}</title>
+    <meta name="keywords" content="{$seo_keywords}" />
+    <meta name="description" content="{$seo_description}">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ODYSSEY" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+
+    <link rel="stylesheet" href="__TMPL__Public/css/reset.css"/>
+    <link rel="stylesheet" href="__TMPL__Public/css/style.css"/>
+    <link rel="shortcut icon" href="/etc/designs/odysseymen/kr/ko/clientlibs/images/common/odyssey_favicon64.ico">
+    <link rel="stylesheet" href="__TMPL__Public/css/product.css"/>
+    <link rel="stylesheet" href="__TMPL__Public/css/custom.css">
+    <link rel="image_src" href="/content/dam/odyssey/kr/ko/images/brand/gallery/sonhojun_cf_image.jpg"/>
+
+    <script src="__TMPL__Public/js/jquery-1.10.2.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="__TMPL__Public/js/html5shiv.min.js"></script>
+    <script src="__TMPL__Public/js/css3-mediaqueries.js"></script>
+    <script src="__TMPL__Public/js/rem.min.js"></script>
+    <script src="__TMPL__Public/js/pie_ie678.js"></script>
+    <script src="__TMPL__Public/js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body class="bg-gray" > <!-- body 에 class="slide-menu-active" 입력시 모바일 사이드메뉴가 열립니다.-->
+
+<div class="global-wrap">
+    <!-- header -->
+    <div id="header" class="header">
+        <div class="grid-row">
+            <h1 class="logo"><a href="/" data-track-name="gnb/logo"><img src="__TMPL__Public/images/logo_pub.png" alt="ODYSSEY"/><span class='blind'>ODYSSEY</span></a></h1>
+            <div id="gnb" class="gnb">
+                <?php
+                $effected_id="main-menu";
+                $filetpl="<a href='\$href' target='\$target'>\$label</a>";
+                $foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown'>\$label
+                <b class='caret'></b></a>";
+                $ul_class="top-menu" ;
+                $li_class="li-class" ;
+                $style="top-menu";
+                $showlevel=6;
+                $dropdown='dropdown';
+                echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
+                ?>
+                <!--<ul class="top-menu">
+
+                    <li><a href="{:U('index/index')}" class="">首页</a></li>
+                    <li><a href="{:U('about/index')}" class="top-menu-title">关于我们</a></li>
+                    <li><a href="brand.html" class="">品牌中心</a></li>
+                    <li><a href="support.html" class="">合作</a></li>
+                    <li><a href="news.html" class="">新闻动态</a></li>
+                    <li><a href="contact.html" class="">联系我们</a></li>
+
+                </ul>-->
+            </div>
+
+        </div>
+
+    </div>
+    <div id="container" class="container">
+        <div class="parbase item_line">
+
+            <div class="pub_top_img">
+                <img src="__TMPL__Public/images/about_bg.png" alt=""/>
+                <div class="pub_top_img_s"><img src="__TMPL__Public/images/about_bg_s.png" alt=""/></div>
+            </div>
+            <div class="grid-row wide">
+                <div class="product-wrap">
+                    <!-- banner -->
+                    <script>
+                        $(document).ready(function() {
+                            productList.list();
+                            productList.contentOpen();
+                            $('.bx-clone .bottom-option > a').attr('tabindex','-1');
+                        });
+                    </script>
+                    <!-- banner End -->
+                    <div class="product-list-wrap list_about">
+                        <div class="grid-row bag">
+                            <div class="product-list-head">
+                                <div class="parbase breadcrumb">
+                                    <div class="location">
+                                        您的位置：<a href="">首页</a> > <a href="">关于我们</a>
+                                    </div>
+
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="product-list-content line_blue">
+                                    <div class="line-title">
+                                        <h3 class="title">企业介绍</h3>
+                                        <span class="sub-title">Company</span>
+
+                                    </div>
+
+                                    <div class="product-feature-wrap">
+                                        <div class="grid-row about_img">
+                                            <div class="feature-item-content list-swipe">
+                                                    <img src="__TMPL__Public/images/about_lb1.png" alt=""/>
+                                            </div>
+
+                                            <!--<div class="carousel-wrap">
+                                                <ul>
+                                                    <li class="active"><a href="#">1번 배너</a></li>
+                                                    <li><a href="#">2번 배너</a></li>
+                                                    <li><a href="#">3번 배너</a></li>
+
+                                                </ul>
+                                                <button type="button" class="btn-stop">정지</button>
+                                            </div>-->
+                                        </div>
+
+                                        <div class="about_centent">
+                                            <div >
+                                                北京都可食品科技有限公司是一家集餐饮管理、运营指导、营销策划、教育培训、食品研发为一体的餐饮投资公司。公司内部拥有专业的运营管理团队、优秀的品牌建设团队、资深的培训研发团队和完善的售后服务团队，致力于为投资者提供完善的投资服务。公司以推动行业发展为己任，倾力打造轻餐饮品牌，弘扬美食文化。
+                                            </div>
+                                            <div class="ct">公司自创建之日起，就致力于在全国范围内，打造轻餐饮龙头企业。通过不断的努力和长期以来的发展，取得了显著的成效，先后创立了椒姿鲜烫、在茶一方、茗怡皇茶等众多知名品牌，为推动中国时尚餐饮业发展，做出了强大的贡献。</div>
+                                            <div class="ct">
+                                                <h3>企业定位</h3>
+                                                新生代的年轻消费群体，拥有独立的个性，在对美食的追求上，更为挑剔。北京都可扎根餐饮行业，专注于研究和发展适合年轻人消费的轻餐饮。紧跟时代发展，从产品、环境、服务、体验上入手，致力于打造年轻人都喜爱的餐饮品牌</div>
+                                        </div>
+
+                                        <div class="clear"></div>
+
+
+                                    </div>
+                                    <div class="idea"><strong>企业理念</strong>：诚信经营，稳健发展；不断创新，专业追求！</div>
+
+                                    <ul class="product-list line_blue_child">
+                                        <php>
+                                            $slides=sp_getslide('about_images',$limit=6,$order = "listorder ASC");
+                                        </php>
+                                        <foreach name="slides" item="val">
+                                            <li class="product-item">
+                                                <a href="{$vo.slide_url}">
+                                                    <div class="pro-w"><img src="{:sp_get_asset_upload_path($val['slide_pic'])}" alt=""></div>
+
+                                                    <div class="grid-row">{$val.slide_name}</div>
+                                                </a>
+                                            </li>
+
+                                        </foreach>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+
+    <footer id="footer_pub">
+        <include file="Public:footer" />
+    </footer>
+    <!-- //footer -->
+    <div class="slide-dimm-wrap"></div>
+    <a href="#header" class="btn-go-top" data-track-name="탑버튼"><span class="blind">본문 상단으로 가기</span></a>
+</div>
+<!-- //wrap -->
+
+</div>
+
+
+</body>
+<!-- //scripts -->
+<script src="__TMPL__Public/js/jquery.bxslider.min.js"></script>
+<!--<script src="__TMPL__Public/js/jquery.sticky.js"></script>-->
+<script src="__TMPL__Public/js/odyssey.ui.js"></script>
+<script src="__TMPL__Public/js/odyssey.js"></script>
+

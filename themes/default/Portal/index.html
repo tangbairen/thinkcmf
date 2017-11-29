@@ -1,0 +1,300 @@
+<extend name="Public:base" />
+<block name="style">
+    <!-- Load miSlider -->
+    <link href="__TMPL__Public/css/mislider.css" rel="stylesheet">
+    <link href="__TMPL__Public/css/mislider-skin-cameo.css" rel="stylesheet">
+    <link href="__TMPL__Public/css/styles.css" rel="stylesheet">
+
+    <script src="__TMPL__Public/js/mislider.js"></script>
+    <script>
+        jQuery(function ($) {
+            var slider = $('.mis-stage').miSlider({
+                //  The height of the stage in px. Options: false or positive integer. false = height is calculated using maximum slide heights. Default: false
+                stageHeight: 450,
+                //  Number of slides visible at one time. Options: false or positive integer. false = Fit as many as possible.  Default: 1
+                slidesOnStage: false,
+                //  The location of the current slide on the stage. Options: 'left', 'right', 'center'. Defualt: 'left'
+                slidePosition: 'center',
+                //  The slide to start on. Options: 'beg', 'mid', 'end' or slide number starting at 1 - '1','2','3', etc. Defualt: 'beg'
+                slideStart: 'mid',
+                //  The relative percentage scaling factor of the current slide - other slides are scaled down. Options: positive number 100 or higher. 100 = No scaling. Defualt: 100
+                slideScaling: 150,
+                //  The vertical offset of the slide center as a percentage of slide height. Options:  positive or negative number. Neg value = up. Pos value = down. 0 = No offset. Default: 0
+                offsetV: -5,
+                //  Center slide contents vertically - Boolean. Default: false
+                centerV: true,
+                //  Opacity of the prev and next button navigation when not transitioning. Options: Number between 0 and 1. 0 (transparent) - 1 (opaque). Default: .5
+                navButtonsOpacity: 1
+            });
+        });
+    </script>
+</block>
+<block name="content">
+    <!-- global_wrap  -->
+    <body>
+    <!-- global_wrap  -->
+    <div class="global-wrap" id='blue'>
+
+        <!-- wrap -->
+        <div class="wrap">
+            <!--顶栏菜单-->
+            <include file="Public:nav" />
+            <div class="logo_top">
+            </div>
+            <!-- container -->
+            <div id="container" class="container">
+
+                <nav class="navigation">
+                    <a href="#intro" class="go-to-section intro" data-track-name="1">1</a>
+                    <a href="#prologue" class="go-to-section prologue" data-track-name="2">2</a>
+                    <a href="#discover" class="go-to-section discover" data-track-name="3">3</a>
+                    <a href="#experience" class="go-to-section experience" data-track-name="4">4</a>
+                    <a href="#conquer" class="go-to-section conquer" data-track-name="5">5</a>
+                </nav>
+
+                <div class="section_wrap">
+                    <!-- section 01 -->
+                    <section id="intro" data-active="0.1" class="seccontents intro scroll">
+                        <div class="section_img">
+                            <div class="mobile">
+                                <h1>北京都可</h1>
+                                <span class="mainImg"></span>
+
+                                <div id="nav_pub" class="nav_top" style="">
+
+
+                                    <nav class="nav">
+                                        <?php
+                                        $effected_id="main-menu";
+                                        $filetpl="<a href='\$href' target='\$target'>\$label</a>";
+                                        $foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown'>\$label
+                                        <b class='caret'></b></a>";
+                                        $ul_class="link" ;
+                                        $li_class="li-class" ;
+                                        $style="link";
+                                        $showlevel=6;
+                                        $dropdown='dropdown';
+                                        echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown);
+                                        ?>
+                                        <!--<ul class="link">
+                                            <li><a class="active" href="default.html">首页</a></li>
+                                            <li><a href="about.html">关于我们</a></li>
+                                            <li><a href="brand.html">品牌中心</a></li>
+                                            <li><a href="support.html">合作</a></li>
+                                            <li><a href="news.html">新闻动态</a></li>
+                                            <li><a href="contact.html">联系我们</a></li>
+                                        </ul>-->
+                                    </nav>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="nextBtn">
+                            <a href="#prologue" class="go-to-section-mb" data-track-name="BLUE ENERGY STORY"></a>
+                        </div>
+                       <!-- <div class="menu_bottom">
+                            <ul>
+                                <li><a href="" title="">关于</a></li>
+                                <li><a href="" title="">品牌</a></li>
+                                <li><a href="" title="">新闻</a></li>
+                                <li><a href="" title="">联系</a></li>
+                            </ul>
+                        </div>-->
+
+                    </section>
+                    <!-- //section 01 -->
+
+                    <!-- section 02 -->
+                    <section id="prologue" data-active="0.1" class="seccontents prologue scroll">
+                        <div class="section_img">
+                            <div class="mobile">
+                            <span class="left">
+                                <img src="__TMPL__Public/images/index_brand01.png" alt="">
+                            </span>
+                            <span class="right">
+                               北京都可食品科技有限公司是一家集餐饮管理、运营指导、营销策划、教育培训、食品研发为一体的餐饮投资公司。公司内部拥有专业的运营管理团队、优秀的品牌建设团队、资深的培训研发团队和完善的售后服务团队，致力于为投资者提供完善的投资服务。公司以推动行业发展为己任，倾力打造轻餐饮品牌，弘扬美食文化。
+
+                            </span>
+                                <div class="cont-paginate">
+                                    <a href="javascript:;" class="prev">&lt;</a>
+                                    <a href="javascript:;" class="next">&gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nextBtn">
+                            <a href="#discover" class="go-to-section-mb" data-track-name="品牌项目">品牌项目</a>
+                        </div>
+                        <!--<div class="menu_bottom">
+                            <ul>
+                                <li><a href="" title="">关于</a></li>
+                                <li><a href="" title="">品牌</a></li>
+                                <li><a href="" title="">新闻</a></li>
+                                <li><a href="" title="">联系</a></li>
+                            </ul>
+                        </div>-->
+                        <div class="ground"></div>
+                    </section>
+                    <!-- //section 02 -->
+
+                    <!-- section 03 -->
+                    <section id="discover" data-active="0.1" class="seccontents discover scroll">
+                        <div class="section_img">
+                            <div class="mobile">
+                                <h1>品牌合集</h1>
+                                <div class="in_brand_tt img01">
+                                    <ol>
+                                        <li><a href="" title="">在茶一方</a></li>
+                                        <li><a href="" title="">茗怡皇茶</a></li>
+                                        <li><a href="" title="">椒姿鲜烫</a></li>
+                                    </ol>
+
+                                    <div id="wrapper">
+                                        <div class="mis-stage">
+                                            <php>
+                                                $slides=sp_getslide('index_brands',$limit=20,$order = "listorder ASC");
+                                            </php>
+
+                                            <ol class="mis-slider">
+                                                <foreach name="slides" item="val">
+                                                <li class="mis-slide">
+                                                    <a href="{$vo.slide_url}" class="mis-container" style="font-size: 18px !important;">
+                                                        <figure>
+                                                            <img src="{:sp_get_asset_upload_path($val['slide_pic'])}" alt="Pink Water Lillies">
+                                                            <h2 style="text-align: center;margin-left: 50px;margin-top:10px;display: none;width: 200px;">{$val.slide_name}</h2>
+                                                            <!--<figcaption>总部拥有一支高效专业的运营团队，为加盟商店铺日常运营提供专业的指导，同时，通过店铺的经营数据，为店铺的进一步发展提供建议，为店铺盈利保驾护航为店铺盈利保驾护航。步发展提供建议，为店铺盈利保驾护航为店铺盈利保驾护航步发展提供建议，为店铺盈利保驾护航为店铺盈利保驾护航</figcaption>-->
+                                                            <p>{$val.slide_content}</p>
+
+                                                        </figure>
+                                                    </a>
+                                                </li>
+                                                </foreach>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <!--<div class="img01"></div>-->
+                        <div class="nextBtn">
+                            <a href="#experience" class="go-to-section-mb" data-track-name=""></a>
+                        </div>
+                    </section>
+                    <!-- //section 03 -->
+
+                    <!-- section 04 -->
+                    <section id="experience" data-active="0.1" class="seccontents experience scroll">
+                        <div class="section_img">
+                            <div class="mobile">
+                                <h1>我们想到的一切</h1>
+                            <span>
+                            众志成城，超越自我，北都敢为人先！<Br/>
+                             紧跟时代发展，从产品、环境、服务、体验上入手，致力于打造年轻人都喜爱的餐饮品牌。
+                            </span>
+                            </div>
+                        </div>
+                        <div class="img01"></div>
+                        <div class="in_04_bottom">
+
+                        </div>
+                        <div class="nextBtn">
+                            <a href="#conquer" class="go-to-section-mb" data-track-name=""></a>
+                        </div>
+
+                    </section>
+                    <!-- //section 04 -->
+
+                    <!-- section 05 -->
+                    <section id="conquer" data-active="0.06" class="seccontents conquer scroll">
+                        <div class="section_img">
+                            <div class="mobile">
+                                <h1>新闻动态</h1>
+
+                                <div class="news_info" id="news_info">
+                                    <div id="content">
+                                        <php>
+                                            $lists = sp_sql_posts("cid:4;order:post_date DESC;limit 3");
+                                        </php>
+                                        <ul class="news_ul" style="display:block;">
+                                            <hr style="width: 100%;position: absolute;top:55px;">
+                                            <volist name="lists" id="vo">
+                                            <li class="graph">
+                                                <a href="{:leuu('article/index',array('id'=>$vo['object_id'],'cid'=>$vo['term_id']))}" title="">
+                                                    <p class="time"><?php echo date('m-d',strtotime($vo['post_date']));?></p>
+                                                    <div class="circle"><i class="ss">&nbsp;</i></div>
+                                                    <h3>{$vo.post_title}</h3>
+                                                    <div class="wire"></div>
+                                                    <div class="centent">{$vo.post_excerpt}</div>
+                                                </a>
+                                            </li>
+                                            </volist>
+
+
+                                        </ul>
+                                        <ul class="news_ul" >
+
+
+                                            <li class="graph">
+                                                <a href="" title="">
+                                                    <p class="time">10-25</p>
+                                                    <div class="circle"><i class="ss">&nbsp;</i></div>
+                                                    <h3>我的饮品店装修4</h3>
+                                                    <div class="wire"></div>
+                                                    <div class="centent">总部拥有一支高效专业的运营团队，为加盟商店铺日常运营提供专业的指导，同时，通过店铺的经营数据，为店铺的进一步发展提供建议，为店铺盈利保驾护航。</div>
+                                                </a>
+                                            </li>
+                                            <li class="graph">
+                                                <a href="" title="">
+                                                    <p class="time">10-14</p>
+                                                    <div class="circle"><i class="ss">&nbsp;</i></div>
+                                                    <h3>我的饮品店装修5</h3>
+                                                    <div class="wire"></div>
+                                                    <div class="centent">总部拥有一支高效专业的运营团队，为加盟商店铺日常运营提供专业的指导，同时，通过店铺的经营数据，为店铺的进一步发展提供建议，为店铺盈利保驾护航。</div>
+                                                </a>
+                                            </li>
+                                            <li class="graph">
+                                                <a href="" title="">
+                                                    <p class="time">10-18</p>
+                                                    <div class="circle"><i class="ss">&nbsp;</i></div>
+                                                    <h3>我的饮品店装修6</h3>
+                                                    <div class="wire"></div>
+                                                    <div class="centent">总部拥有一支高效专业的运营团队，为加盟商店铺日常运营提供专业的指导，同时，通过店铺的经营数据，为店铺的进一步发展提供建议，为店铺盈利保驾护航。</div>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <!--<ul id="tab">
+                                        <li class="current">&nbsp;</li>
+                                        <li>&nbsp;</li>
+                                    </ul>-->
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--底部-->
+                        <footer id="footer_pub" class="footer_pub">
+                        <include file="Public:footer" />
+                        </footer>
+
+                    </section>
+                    <!-- //section 05 -->
+
+                </div>
+            </div>
+            <!-- //container -->
+
+        </div>
+
+    </div>
+
+    </body>
+</block>
+
+
